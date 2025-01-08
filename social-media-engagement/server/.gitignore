@@ -1,0 +1,47 @@
+# Python bytecode files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pdb
+
+# Virtual environment
+.venv/
+env/
+venv/
+ENV/
+
+# IDE settings
+.vscode/
+.idea/
+
+# Pytest
+*.log
+*.coverage
+.coverage.*
+nosetests.xml
+pytest-debug.log
+pytest*
+
+# Docker
+*.dockerfile
+docker-compose.override.yml
+
+# Database files
+*.sqlite3
+*.db
+*.db-journal
+
+# FastAPI specific
+instance/
+*.env
+.env.*
+*.pkl
+*.log
+
+# Other unwanted files
+*.bak
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
