@@ -6,6 +6,7 @@ import json
 import requests
 import warnings
 import os
+from fastapi.middleware.cors import CORSMiddleware
 
 # Load environment variables
 load_dotenv()
@@ -32,6 +33,14 @@ TWEAKS = {
 }
 
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Adjust to specific domains if necessary
+    allow_credentials=True,
+    allow_methods=["*"],  # Allow all methods
+    allow_headers=["*"],  # Allow all headers
+)
 
 class FlowInput(BaseModel):
     message: str

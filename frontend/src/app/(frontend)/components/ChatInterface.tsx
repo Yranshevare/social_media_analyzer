@@ -49,6 +49,10 @@ export default function ChatInterface() {
     websocket.current = new WebSocket("ws://localhost:8000/ws/chat");
     // websocket.current = new WebSocket("wss://laknjw764k3jrvggk5746sfy2e.srv.us/ws/chat");  
     // websocket.current = new WebSocket("ws://localhost:8000/ws/chat");
+
+    websocket.current.onopen = () => {
+      console.log('WebSocket connection established');
+    };
    
 
     websocket.current.onmessage = (event: MessageEvent) => {
@@ -179,10 +183,10 @@ export default function ChatInterface() {
                 )}
               </div>
               <div
-                className={`max-w-[70%] px-3 py-2 mt-2 rounded-l-lg rounded-b-lg ${
+                className={`max-w-[70%] px-3 py-2 mt-2 ${
                   m.role === "user"
-                    ? "bg-blue-500 text-white"
-                    : "bg-gray-200 text-black"
+                    ? "bg-blue-500 text-white  rounded-l-lg rounded-b-lg"
+                    : "bg-gray-200 text-black  rounded-r-lg rounded-b-lg"
                 } shadow-md`}
               >
                 {m.role === "bot" ? (

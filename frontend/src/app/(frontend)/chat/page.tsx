@@ -40,19 +40,19 @@ export default function page() {
                 <TabsContent value="Likes">
                   <div className="flex items-center space-x-2">
                     <BarChart className="h-5 w-5 text-blue-500" />
-                    <span>Total likes: 123456</span>
+                    <span>Total likes: 309,359</span>
                   </div>
                 </TabsContent>
                 <TabsContent value="Shears">
                   <div className="flex items-center space-x-2">
                     <Users className="h-5 w-5 text-green-500" />
-                    <span>Total Shares: 123456</span>
+                    <span>Total Shares: 48,051</span>
                   </div>
                 </TabsContent>
                 <TabsContent value="Comments">
                   <div className="flex items-center space-x-2">
                     <TrendingUp className="h-5 w-5 text-purple-500" />
-                    <span>Total comment: 123456 </span>
+                    <span>Total comment: 48,065 </span>
                   </div>
                 </TabsContent>
               </Tabs>
